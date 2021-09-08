@@ -6,7 +6,7 @@
 char *rot13(const char *src)
 {
     char *encrypt = (char *)calloc(sizeof(src), sizeof(char));
-    if (!encrypt) { perro("ENOMEM"); return NULL; }
+    if (!encrypt) { perror("ENOMEM"); return NULL; }
     strncpy(encrypt, src, sizeof(src));
 
     while (*current) { 
